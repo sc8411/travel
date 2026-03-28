@@ -50,7 +50,7 @@
     /* ── HERO ── */
     .hero {
       background: linear-gradient(160deg, #0d1b2a 0%, #1a1a0a 50%, #3d0e0e 100%);
-      padding: 32px 20px 28px;
+      padding: 14px 16px 12px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -64,15 +64,15 @@
     }
 
     .hero-flag {
-      font-size: 2.4rem;
-      margin-bottom: 8px;
+      font-size: 1.5rem;
+      margin-bottom: 3px;
       position: relative;
       z-index: 1;
     }
 
     .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: #fff;
       letter-spacing: 0.5px;
@@ -83,9 +83,9 @@
 
     .hero-sub {
       color: rgba(255, 255, 255, 0.55);
-      font-size: 0.72rem;
-      margin-top: 8px;
-      letter-spacing: 2px;
+      font-size: 0.65rem;
+      margin-top: 4px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       font-weight: 500;
       position: relative;
@@ -95,8 +95,8 @@
     .hero-hotels {
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      margin-top: 16px;
+      gap: 3px;
+      margin-top: 8px;
       position: relative;
       z-index: 1;
     }
@@ -793,7 +793,8 @@
       <div class="hotel-line"><span class="hotel-dot" style="background:#2E8B57"></span>Apr 3–6 · Tivoli Carvoeiro,
         Algarve</div>
       <div class="hotel-line"><span class="hotel-dot" style="background:#B22222"></span>Apr 6–9 · Sofitel Liberdade,
-        Lisbon</div>
+        Lisbon &nbsp;·&nbsp; <span style="opacity:0.7">SS - QFWDLGHQ (Accor: 2 Rooms) || SJC - 1319AD50516 (Bilt: 1
+          Room)</span></div>
       <div class="hotel-line"><span class="hotel-dot" style="background:#2255A4"></span>Apr 9–12 · NH Collection Porto
         Batalha</div>
     </div>
@@ -828,8 +829,8 @@
 
     <div class="day-selector">
       <button class="day-pill active-faro" onclick="switchDay('faro','f1',this)">Apr 3 · Arrive</button>
-      <button class="day-pill" onclick="switchDay('faro','f2',this)">Apr 4 · Lagos + Cliffs</button>
-      <button class="day-pill" onclick="switchDay('faro','f3',this)">Apr 5 · Benagil + Marinha</button>
+      <button class="day-pill" onclick="switchDay('faro','f2',this)">Apr 4 · Hike · Carvoeiro + Albufeira</button>
+      <button class="day-pill" onclick="switchDay('faro','f3',this)">Apr 5 · Portimão + Lagos</button>
       <button class="day-pill" onclick="switchDay('faro','f4',this)">Apr 6 · Faro → Lisbon</button>
     </div>
 
@@ -838,6 +839,30 @@
       <div class="tip">💡 <strong>Arrival day — dinner only.</strong> Landing at 7pm means immigration, bag collection,
         and the 60km drive to Tivoli Carvoeiro will put you at the hotel around 9:30–10pm. No sightseeing today — check
         in, freshen up, dinner at the hotel. Everything else starts tomorrow.</div>
+
+      <!-- Transfer Confirmation — shown inline, not buried in logistics -->
+      <div
+        style="margin: 14px 0; padding: 14px 16px; background: rgba(22,163,74,0.07); border: 1.5px solid rgba(22,163,74,0.4); border-radius: 12px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+          <span style="font-size:1.4rem;">🚐</span>
+          <div>
+            <div style="font-weight:700; font-size:0.95rem;">FAO → Tivoli Carvoeiro Transfer</div>
+            <span
+              style="background:#16a34a; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700;">✅
+              CONFIRMED</span>
+          </div>
+        </div>
+        <div style="font-size:0.8rem; line-height:1.9; color: var(--ink);">
+          <div><strong>Date:</strong> Friday, April 3, 2026 &nbsp;·&nbsp; <strong>Pick-up:</strong> 9:00 PM · FAO – Faro
+            Airport</div>
+          <div><strong>Flight:</strong> EI 496 &nbsp;·&nbsp; <strong>Confirmation No.</strong> MOZ8679620</div>
+          <div><strong>Passenger:</strong> Sahil Chokshi · 9 passengers total</div>
+          <div><strong>Vehicles:</strong> 2 × Private Van (max 6 + max 12) · English-speaking driver</div>
+          <div><strong>Contact:</strong> +1 408-532-5848 · sac31984@gmail.com</div>
+          <div style="margin-top:4px; color:#6b7280; font-style:italic;">Driver details will be shared closer to ride
+            date.</div>
+        </div>
+      </div>
 
       <div class="acc-section acc-food open">
         <button class="acc-header" onclick="toggleAcc(this)">
@@ -880,223 +905,39 @@
         </div>
       </div>
 
-      <div class="acc-section acc-logistics">
-        <button class="acc-header" onclick="toggleAcc(this)">
-          <div class="acc-header-left"><span class="acc-icon">✈️</span><span class="acc-title">Logistics</span></div>
-          <span class="acc-chevron">▾</span>
-        </button>
-        <div class="acc-body">
-          <div class="logistics-block">
-            <div class="log-row"><span class="log-icon">✈️</span>
-              <div class="log-text"><strong>Land 7pm · Faro Airport (FAO)</strong>Allow 45–60 min for immigration +
-                bags. Then ~60km drive west to Tivoli Carvoeiro — approximately 50 min on EN125 or A22 toll road.
-                Estimated hotel arrival: 9:30–10pm.</div>
-            </div>
-            <div class="log-row"><span class="log-icon">🚗</span>
-              <div class="log-text"><strong>Rental car or transfer</strong>No direct train to Carvoeiro — you need a
-                rental car or pre-booked private transfer. If renting, pick up at the airport. A22 is a toll road — have
-                coins or get a Via Verde transponder from the rental company.</div>
-            </div>
-            <div class="log-row"><span class="log-icon">🗝️</span>
-              <div class="log-text"><strong>Late check-in</strong>Call Tivoli ahead to confirm late arrival — they'll
-                have your keys ready at reception. Standard check-in is 3pm but late arrivals are common and fully
-                expected.</div>
-            </div>
-            <div class="log-row"><span class="log-icon">💶</span>
-              <div class="log-text"><strong>Get cash at the airport</strong>Several restaurants are cash-only (Estúdio
-                Vegetariano, Goji Lounge in Lagos). Use the ATM at Faro Airport arrivals — better rates than exchange
-                desks.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── APR 5 ── -->
-    <div id="faro-f3" class="day-panel">
-      <div class="tip">💡 <strong>Benagil + Marinha are essentially your backyard</strong> — both 15–20 min from Tivoli.
-        Book Benagil cave boat tour the morning slot (tours fill by 10am). Grab breakfast at Chelsea Coffee before
-        heading out.</div>
-
-      <div class="acc-section acc-sights open">
-        <button class="acc-header" onclick="toggleAcc(this)">
-          <div class="acc-header-left"><span class="acc-icon">📍</span><span class="acc-title">Sights</span><span
-              class="acc-count">3</span></div>
-          <span class="acc-chevron">▾</span>
-        </button>
-        <div class="acc-body">
-          <div class="cards-wrap">
-            <div class="card sight-card">
-              <div class="card-inner">
-                <div class="card-row1">
-                  <div class="card-name"><span class="must">⭐</span>Benagil Sea Cave</div><span class="badge b-book">🎟️
-                    Book Ahead</span>
-                </div>
-                <div class="card-meta"><span class="meta">⏱ 1–1.5 hrs</span><span class="meta">🚗 15 min from
-                    Tivoli</span><span class="meta">~€20pp</span></div>
-                <div class="card-desc">One of the most spectacular sea caves in Europe — natural skylight opening inside
-                  a cathedral-like cavern. <strong>You must go by boat or kayak</strong> (swimming in is not allowed).
-                  Book morning slot — afternoons get choppy. Best operators: Algarve Exploration, Fathoms Diving.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Benagil+Cave+Algarve+Portugal"
-                    class="btn-map btn-faro">📍 Maps</a></div>
-              </div>
-            </div>
-            <div class="card sight-card">
-              <div class="card-inner">
-                <div class="card-row1">
-                  <div class="card-name"><span class="must">⭐</span>Praia de Marinha</div><span
-                    class="badge b-free">Free</span>
-                </div>
-                <div class="card-meta"><span class="meta">⏱ Half day</span><span class="meta">🚗 20 min from
-                    Tivoli</span></div>
-                <div class="card-desc">Consistently ranked one of Europe's most beautiful beaches — golden limestone
-                  arches, emerald water, rock pools. Combine with Benagil (both on the same stretch of coast).
-                  <strong>The cliff walk between them is stunning.</strong>
-                </div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Praia+de+Marinha+Lagoa+Algarve"
-                    class="btn-map btn-faro">📍 Maps</a></div>
-              </div>
-            </div>
-            <div class="card sight-card">
-              <div class="card-inner">
-                <div class="card-row1">
-                  <div class="card-name">Algar Seco Rock Formation</div><span class="badge b-free">Free</span>
-                </div>
-                <div class="card-meta"><span class="meta">⏱ 30–45 min</span><span class="meta">🚗 5 min from
-                    Tivoli</span></div>
-                <div class="card-desc">Surreal honeycomb limestone rock formations right near Carvoeiro — dramatic
-                  walking paths carved into cliffs above the sea. Eerie and beautiful. Worth a quick detour before or
-                  after Benagil.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Algar+Seco+Carvoeiro+Algarve"
-                    class="btn-map btn-faro">📍 Maps</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="acc-section acc-food">
-        <button class="acc-header" onclick="toggleAcc(this)">
-          <div class="acc-header-left"><span class="acc-icon">🍽️</span><span class="acc-title">Food</span><span
-              class="acc-count">3</span></div>
-          <span class="acc-chevron">▾</span>
-        </button>
-        <div class="acc-body">
-          <div class="cards-wrap">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-row1">
-                  <div class="card-name">Chelsea Coffee &amp; Brunch</div><span class="badge b-veg">🌱
-                    Veg-Friendly</span>
-                </div>
-                <div class="card-meta"><span class="meta"><span class="wd wg"></span>10 min walk · Carvoeiro</span><span
-                    class="meta">☕ Open 8am–8pm</span></div>
-                <div class="card-desc">Shakshuka, pistachio croissants, açaí bowls. <strong>Open from 8am</strong> —
-                  ideal before heading to the caves. Family breakfast spot.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Chelsea+Coffee+Brunch+Carvoeiro+Algarve"
-                    class="btn-map btn-faro">📍 Maps</a></div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-row1">
-                  <div class="card-name">Tivoli Mare Bistro</div><span class="badge b-veg">🌱 Veg-Friendly</span>
-                </div>
-                <div class="card-meta"><span class="meta">🏨 At Tivoli · Poolside</span><span class="meta">🥗 Casual
-                    lunch</span></div>
-                <div class="card-desc">Easy poolside lunch when you return from the beaches. Veggie pizza, salads,
-                  grilled veg. No booking needed — good fallback for tired kids.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Tivoli+Carvoeiro+Mare+Bistro"
-                    class="btn-map btn-faro">📍 Maps</a></div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-row1">
-                  <div class="card-name">Pashmina Indian 🎟️</div><span class="badge b-indian">🇮🇳 Indian</span>
-                </div>
-                <div class="card-meta"><span class="meta">Estr. do Farol Alfanzina · Carvoeiro</span><span
-                    class="meta">⭐ 4.7/5 · ⚠️ Closed Tue</span></div>
-                <div class="card-desc">Large vegetarian menu, Delhi-trained chefs, home-ground spices. Fairy-light
-                  terrace. Good dinner if Gurkha is already booked. 🎟️ Reserve ahead.</div>
-                <div class="card-actions"><a
-                    href="https://maps.google.com/?q=Pashmina+Indian+Restaurant+Estrada+do+Farol+Alfanzina+Carvoeiro"
-                    class="btn-map btn-faro">📍 Maps</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="acc-section acc-logistics">
-        <button class="acc-header" onclick="toggleAcc(this)">
-          <div class="acc-header-left"><span class="acc-icon">🚗</span><span class="acc-title">Logistics</span></div>
-          <span class="acc-chevron">▾</span>
-        </button>
-        <div class="acc-body">
-          <div class="logistics-block">
-            <div class="log-row"><span class="log-icon">🚤</span>
-              <div class="log-text"><strong>Benagil Cave Boat Tour</strong>Book in advance via Algarve Exploration or
-                GetYourGuide. Morning slots (9–11am) have calmer seas. Duration ~1–1.5 hrs. Departs from Benagil beach.
-              </div>
-            </div>
-            <div class="log-row"><span class="log-icon">🅿️</span>
-              <div class="log-text"><strong>Parking</strong>Both Benagil and Marinha have small paid car parks (€2–4).
-                Go early — full by 10am in April.</div>
-            </div>
-            <div class="log-row"><span class="log-icon">👟</span>
-              <div class="log-text"><strong>Cliff walk</strong>The trail between Marinha and Benagil (~2km) is stunning
-                but has uneven steps. Wear proper shoes — not flip flops. Fine for ages 9–11 with supervision.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="acc-section acc-kids">
-        <button class="acc-header" onclick="toggleAcc(this)">
-          <div class="acc-header-left"><span class="acc-icon">🎒</span><span class="acc-title">Kids Pick</span></div>
-          <span class="acc-chevron">▾</span>
-        </button>
-        <div class="acc-body">
-          <div class="kids-wrap">
-            <div class="kid-card">
-              <div class="kid-title">🌊 Benagil Cave — genuinely awe-inspiring</div>
-              <div class="kid-desc">Boat ride into a sea cave with a skylight hole — feels like discovering something
-                secret. Ages 9–11 will talk about this for years. Go for the kayak or small boat option so you can get
-                close to the walls.</div>
-            </div>
-            <div class="kid-card">
-              <div class="kid-title">🔎 Rock pool exploring at Marinha</div>
-              <div class="kid-desc">The limestone arches at Marinha Beach have incredible rock pools at low tide —
-                crabs, sea urchins, small fish. Check tide times before you go; low tide is the best window.</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- ── APR 4 ── -->
     <div id="faro-f2" class="day-panel">
+      <div class="tip">💡 <strong>Active Day — The Seven Hanging Valleys Hike.</strong> This is your coastal trekking
+        highlight. Start at Praia da Marinha and finish near Carvoeiro. Afternoon visit to the vibrant Albufeira
+        coastline before a sunset window at Algar Seco.</div>
+      <div
+        style="margin: 10px 0 14px; padding: 11px 14px; background: rgba(234,179,8,0.09); border: 1.5px solid rgba(234,179,8,0.5); border-radius: 10px; font-size: 0.82rem; line-height: 1.7;">
+        <span style="font-weight:700;">⏰ Leave by 8:30 AM</span> — Praia da Marinha car park fills up by 9:30 AM,
+        especially on weekends. Get there early to guarantee a spot and enjoy the quieter morning light on the cliffs.
+      </div>
+
       <div class="route">
         <div class="route-steps">
           <div class="route-step"><span class="rdot rdot-faro">1</span>
-            <div class="rstep-text"><strong>Morning</strong> · Drive to Lagos (30 min west)<br><span
-                class="rstep-sub">Lagos Old Town + Praia Dona Ana</span></div>
+            <div class="rstep-text"><strong>09:00 AM</strong> · Seven Hanging Valleys Hike<br><span
+                class="rstep-sub">Start at Marinha, end at Praia de Vale Centeanes</span></div>
           </div>
           <div class="rarrow">↓</div>
           <div class="route-step"><span class="rdot rdot-faro">2</span>
-            <div class="rstep-text"><strong>Lunch</strong> · Lagos Old Town restaurants<br><span class="rstep-sub">⚠️
-                Top picks are cash only — bring euros</span></div>
+            <div class="rstep-text"><strong>02:30 PM</strong> · Albufeira Coastal Tour<br><span class="rstep-sub">Pau da
+                Bandeira Viewpoint + Marina de Albufeira</span></div>
           </div>
           <div class="rarrow">↓</div>
           <div class="route-step"><span class="rdot rdot-faro">3</span>
-            <div class="rstep-text"><strong>Afternoon</strong> · Ponta da Piedade → Praia do Camilo<br><span
-                class="rstep-sub">Both within 10 min of Lagos Old Town</span></div>
+            <div class="rstep-text"><strong>06:30 PM</strong> · Algar Seco "Windows"<br><span class="rstep-sub">The
+                famous "A Boneca" rock window at sunset</span></div>
           </div>
           <div class="rarrow">↓</div>
           <div class="route-step"><span class="rdot rdot-faro">4</span>
-            <div class="rstep-text"><strong>Evening</strong> · Drive back to Tivoli (30 min) or stay for dinner<br><span
-                class="rstep-sub">Book Outro Lado (Faro) for Sat 5th if taking late train tomorrow</span></div>
+            <div class="rstep-text"><strong>08:00 PM</strong> · Dinner in Carvoeiro<br><span
+                class="rstep-sub">Pizza/Pasta at Villa Medici</span></div>
           </div>
         </div>
       </div>
@@ -1104,7 +945,7 @@
       <div class="acc-section acc-sights open">
         <button class="acc-header" onclick="toggleAcc(this)">
           <div class="acc-header-left"><span class="acc-icon">📍</span><span class="acc-title">Sights</span><span
-              class="acc-count">5</span></div>
+              class="acc-count">6</span></div>
           <span class="acc-chevron">▾</span>
         </button>
         <div class="acc-body">
@@ -1112,71 +953,86 @@
             <div class="card sight-card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name"><span class="must">⭐</span>Ponta da Piedade</div><span
-                    class="badge b-free">Free</span>
+                  <div class="card-name">Seven Hanging Valleys Power Hike</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
                 </div>
-                <div class="card-meta"><span class="meta">⏱ 1–2 hrs</span><span class="meta">🚗 3 min south of
-                    Lagos</span></div>
-                <div class="card-desc"><strong>Most spectacular sea stack formations in Portugal</strong> — dramatic
-                  ochre cliffs, grottos, arches. Clifftop walk is free; boat tours from the base ~€20pp. Both are worth
-                  it. Bring water — exposed and sunny.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Ponta+da+Piedade+Lagos+Algarve"
+                <div class="card-meta"><span class="meta">⏱ 2–3 hrs</span><span class="meta">🚶 6km one-way</span><span
+                    class="meta">⭐ Moderate</span></div>
+                <div class="card-desc">Park at Praia da Marinha. Do the full 6km trail to Praia de Vale Centeanes. Pass
+                  the Benagil "Eye" (seeing cave from above), Alfanzina Lighthouse, and massive sinkholes. Ends near
+                  your hotel.</div>
+                <div class="card-actions"><a
+                    href="https://maps.google.com/?q=Praia+da+Marinha+Seven+Hanging+Valleys+Trail"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
             <div class="card sight-card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name"><span class="must">⭐</span>Praia do Camilo</div><span
-                    class="badge b-free">Free</span>
+                  <div class="card-name">Pau da Bandeira Viewpoint</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
                 </div>
-                <div class="card-meta"><span class="meta">⏱ 1–2 hrs</span><span class="meta">🚗 2 min from Ponta da
-                    Piedade</span></div>
-                <div class="card-desc">Hidden beach down 200 wooden steps — enclosed by cliffs, turquoise water,
-                  beautiful even in April. Go after Ponta da Piedade (they're right next to each other). Worth every
-                  step.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Praia+do+Camilo+Lagos+Algarve"
+                <div class="card-meta"><span class="meta">📍 Albufeira</span><span class="meta">🚶 Escalator
+                    access</span></div>
+                <div class="card-desc">Visit for stunning coastal panoramas of Albufeira's old town and beach. Use the
+                  outdoor escalators near the beach to get up to the Miradouro effortlessly.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Miradouro+do+Pau+da+Bandeira+Albufeira"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
             <div class="card sight-card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name">Lagos Old Town Walls</div><span class="badge b-free">Free</span>
+                  <div class="card-name">Marina de Albufeira</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
                 </div>
-                <div class="card-meta"><span class="meta">⏱ 45 min stroll</span><span class="meta">📍 Lagos
-                    centre</span></div>
-                <div class="card-desc">Well-preserved historic fortified walls, mosaic pavements and pretty squares.
-                  Good morning walk before lunch — passes by the cash machines you'll need for Estúdio Vegetariano.
-                </div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Lagos+Old+Town+Walls+Algarve"
+                <div class="card-meta"><span class="meta">⏱ 30 min</span><span class="meta">🚗 Albufeira</span></div>
+                <div class="card-desc">Move over to the colorful Marina de Albufeira. Distinctive candy-colored
+                  buildings and a relaxed vibe for a quick afternoon stroll and photos.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Marina+de+Albufeira"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
             <div class="card sight-card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name">Praia Dona Ana</div><span class="badge b-free">Free</span>
+                  <div class="card-name">Algar Seco "Windows"</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
                 </div>
-                <div class="card-meta"><span class="meta">⏱ Flexible</span><span class="meta">🚗 2 min from Lagos
-                    centre</span></div>
-                <div class="card-desc">Wide sandy beach flanked by red cliffs, calm water good for swimming in April.
-                  Easy family beach stop between Lagos town and the Piedade headland.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Praia+Dona+Ana+Lagos+Algarve"
+                <div class="card-meta"><span class="meta">⏱ 06:30 PM</span><span class="meta">🚶 Carvoeiro
+                    boardwalk</span></div>
+                <div class="card-desc">Walk down into the "A Boneca" cave—a famous rock window overlooking the sea.
+                  Surreal honeycomb limestone formations right in your backyard.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Algar+Seco+Carvoeiro"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
             <div class="card sight-card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name">Zoomarine (Optional) 🎟️</div><span class="badge b-book">🎟️ Book Ahead</span>
+                  <div class="card-name">Benagil Sea Cave</div><span class="badge b-book">🎟️ Book Ahead</span>
                 </div>
-                <div class="card-meta"><span class="meta">⏱ Full day</span><span class="meta">🚗 35 min east of
-                    Tivoli</span><span class="meta">Alternative day option</span></div>
-                <div class="card-desc">Marine theme park with dolphin shows, slides, sea lion feeding. Could swap for
-                  today or Apr 4. Nothing like it in the US — kids will remember it. <strong>Book online for
-                    discount.</strong></div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Zoomarine+Guia+Albufeira+Algarve"
+                <div class="card-meta"><span class="meta">⏱ 1–1.5 hrs</span><span class="meta">🚗 15 min away</span>
+                </div>
+                <div class="card-desc">One of the most spectacular sea caves in Europe. <strong>Note:</strong> On this
+                  hike, you'll see it from above (the "Eye"). To go inside, see tomorrow's boat tour.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Benagil+Cave+Algarve"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Praia de Marinha</div><span class="badge b-free">Free</span>
+                </div>
+                <div class="card-meta"><span class="meta">⏱ Morning</span><span class="meta">📍 Start point</span></div>
+                <div class="card-desc">Ranked one of Europe's most beautiful beaches. Your hike starts here—take 15 mins
+                  to descend to the sand first if you want the "ground-level" views.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Praia+de+Marinha+Lagoa"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
@@ -1195,59 +1051,54 @@
             <div class="card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name"><span class="must">⭐</span>Estúdio Vegetariano 🎟️</div><span
-                    class="badge b-vegan">🌿 100% Veg</span>
+                  <div class="card-name">Villa Medici</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
                 </div>
-                <div class="card-meta"><span class="meta">📍 R. da Oliveira 30 · Lagos Old Town</span><span
-                    class="meta">⭐ 4.8/5 · ⚠️ Cash only</span></div>
-                <div class="card-desc"><strong>Best vegetarian in the Algarve.</strong> Stuffed peppers, aubergine
-                  lasagna, seitan medallions, chocolate mousse. ~€10–15pp. 🎟️ Small — book ahead. Cash only, ATM right
-                  nearby.</div>
-                <div class="card-actions"><a
-                    href="https://maps.google.com/?q=Estudio+Vegetariano+Rua+da+Oliveira+30+Lagos+Portugal"
+                <div class="card-meta"><span class="meta">⏱ 08:00 PM Dinner</span><span class="meta">📍 Carvoeiro</span>
+                </div>
+                <div class="card-desc">Classic Italian dining. High-quality pasta and pizza, very popular in Carvoeiro.
+                  Excellent for a satisfying meal after a long hike.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Villa+Medici+Carvoeiro"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
             <div class="card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name"><span class="must">⭐</span>Goji Lounge Café</div><span class="badge b-vegan">🌿
-                    100% Vegan</span>
+                  <div class="card-name">Chelsea Coffee & Brunch</div><span class="badge b-veg">🌱 Veg-Friendly</span>
                 </div>
-                <div class="card-meta"><span class="meta">📍 R. Marreiros Netto 61 · Lagos</span><span class="meta">⭐
-                    4.7/5 · Open 8am–6pm · ⚠️ Cash only</span></div>
-                <div class="card-desc">Açaí bowls, Buddha bowls, pancakes, pepper risotto. <strong>Opens 8am</strong> —
-                  can double as breakfast stop. Best backup if Estúdio is full.</div>
-                <div class="card-actions"><a
-                    href="https://maps.google.com/?q=Goji+Lounge+Cafe+Rua+Marreiros+Netto+61+Lagos+Portugal"
+                <div class="card-meta"><span class="meta">☕ Open 8am</span><span class="meta">🚶 Carvoeiro centre</span>
+                </div>
+                <div class="card-desc">Healthy breakfasts, shakshuka, and great coffee. Perfect "fuel up" spot before
+                  driving to Marinha for the hike.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Chelsea+Coffee+Brunch+Carvoeiro"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
             <div class="card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name">Nola Kitchen</div><span class="badge b-veg">🌱 Veg-Friendly</span>
+                  <div class="card-name">Tivoli Mare Bistro</div><span class="badge b-veg">🌱 Veg-Friendly</span>
                 </div>
-                <div class="card-meta"><span class="meta">📍 Praça D. Filipa de Lencastre 25 · Lagos</span><span
-                    class="meta">🥗 Healthy / Organic</span></div>
-                <div class="card-desc">Coconut pancakes, healthy bowls, fresh juices. Light option — good if you want
-                  something quick before the afternoon cliff walk.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Nola+Kitchen+Lagos+Portugal"
+                <div class="card-meta"><span class="meta">🏨 At Hotel</span><span class="meta">🥗 Casual Lunch</span>
+                </div>
+                <div class="card-desc">If you loop back to the hotel after the hike, this is the easiest lunch spot for
+                  the kids to relax by the pool.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Tivoli+Carvoeiro+Mare+Bistro"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
             <div class="card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name">Casa do Prego 🎟️</div><span class="badge b-veg">🌱 Veg Options</span>
+                  <div class="card-name">Pashmina Indian</div><span class="badge b-indian">🇮🇳 Indian</span>
                 </div>
-                <div class="card-meta"><span class="meta">📍 R. Lançarote de Freitas 18 · Lagos</span><span
-                    class="meta">🌅 Rooftop terrace · Open 12–10pm</span></div>
-                <div class="card-desc">Rooftop with views, good veg tapas (hummus, zucchini, salads). <strong>Very
-                    family-friendly</strong> — multiple reviews mention staff playing with kids. Good afternoon snack
-                  after cliffs. 🎟️ Reserve.</div>
-                <div class="card-actions"><a
-                    href="https://maps.google.com/?q=Casa+do+Prego+Rua+Lancarote+de+Freitas+18+Lagos+Portugal"
+                <div class="card-meta"><span class="meta">📍 Centeanes area</span><span class="meta">⭐ 4.7/5</span>
+                </div>
+                <div class="card-desc">Top-tier vegetarian curriculum. Good alternative dinner if Villa Medici is fully
+                  booked. Reserve ahead.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Pashmina+Indian+Restaurant+Carvoeiro"
                     class="btn-map btn-faro">📍 Maps</a></div>
               </div>
             </div>
@@ -1262,23 +1113,259 @@
         </button>
         <div class="acc-body">
           <div class="logistics-block">
+            <div class="log-row"><span class="log-icon">🥾</span>
+              <div class="log-text"><strong>Hike Strategy</strong>Park at Marinha. It's a one-way 6km hike. You can
+                catch a quick taxi/Uber back to your car from the Centeanes end, or hike back if you're feeling
+                ambitious.</div>
+            </div>
             <div class="log-row"><span class="log-icon">🚗</span>
-              <div class="log-text"><strong>Drive to Lagos</strong>30 min west on the EN125 or A22 (toll road — have
-                coins or Via Verde). Park at Meia Praia or centre car parks. Paid, usually €2–4/day.</div>
+              <div class="log-text"><strong>Parking</strong>Marinha parking fills up by 9:30 AM. Albufeira old town has
+                several underground lots; use them to avoid the narrow streets.</div>
             </div>
-            <div class="log-row"><span class="log-icon">💵</span>
-              <div class="log-text"><strong>Cash!</strong>Both Estúdio Vegetariano and Goji Lounge are <strong>cash
-                  only.</strong> Get euros before leaving Carvoeiro — ATM in the village square.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── APR 5 ── -->
+    <div id="faro-f3" class="day-panel">
+      <div class="tip">💡 <strong>Portimão + Lagos.</strong> Start in Portimão for the Benagil boat tour (already
+        confirmed ✅), then spend the afternoon in Lagos exploring the old town and iconic cliff stacks.</div>
+      <div
+        style="margin: 10px 0 14px; padding: 11px 14px; background: rgba(234,179,8,0.09); border: 1.5px solid rgba(234,179,8,0.5); border-radius: 10px; font-size: 0.82rem; line-height: 1.7;">
+        <span style="font-weight:700;">💵 Bring Cash for Lagos</span> — Goji Lounge Café and Estúdio Vegetariano are
+        cash-only (or cash-preferred). Grab euros from the ATM in Carvoeiro village square before leaving in the
+        morning.
+      </div>
+
+      <div class="route">
+        <div class="route-steps">
+          <div class="route-step"><span class="rdot rdot-faro">1</span>
+            <div class="rstep-text"><strong>10:00 AM</strong> · Benagil Boat Tour (Portimão)<br><span
+                class="rstep-sub">2-hour tour including Ferragudo & Benagil Cave</span></div>
+          </div>
+          <div class="rarrow">↓</div>
+          <div class="route-step"><span class="rdot rdot-faro">2</span>
+            <div class="rstep-text"><strong>01:00 PM</strong> · Lunch in Lagos<br><span class="rstep-sub">30-min taxi
+                from Portimão to downtown Lagos</span></div>
+          </div>
+          <div class="rarrow">↓</div>
+          <div class="route-step"><span class="rdot rdot-faro">3</span>
+            <div class="rstep-text"><strong>02:30 PM</strong> · Ponta da Piedade & Cliffs<br><span
+                class="rstep-sub">Boardwalks + the iconic Praia do Camilo stairs</span></div>
+          </div>
+          <div class="rarrow">↓</div>
+          <div class="route-step"><span class="rdot rdot-faro">4</span>
+            <div class="rstep-text"><strong>08:00 PM</strong> · Dinner in Carvoeiro<br><span class="rstep-sub">A Vela —
+                excellent vegetarian flexibility</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-section acc-sights open">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-header-left"><span class="acc-icon">📍</span><span class="acc-title">Sights</span><span
+              class="acc-count">7</span></div>
+          <span class="acc-chevron">▾</span>
+        </button>
+        <div class="acc-body">
+          <div class="cards-wrap">
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Benagil Boat Tour (Portimão)</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
+                </div>
+                <div class="card-meta"><span class="meta">⏱ 10:00 AM – 12:00 PM</span><span class="meta">📍 Portimão
+                    Marina</span><span class="meta"
+                    style="background:#16a34a; color:#fff; border-radius:4px; padding:2px 7px; font-weight:700;">✅
+                    CONFIRMED</span></div>
+                <div class="card-desc">Most tours from Portimão last 2 hours. You’ll see the Ferragudo castles, several
+                  "secret" beaches, and go inside the Benagil Cave. Be back at the Marina by 12:00 PM.</div>
+                <div
+                  style="margin-top:10px; padding:10px 12px; background:rgba(22,163,74,0.08); border:1px solid rgba(22,163,74,0.35); border-radius:8px; font-size:0.78rem; line-height:1.7;">
+                  <div style="font-weight:700; color:#16a34a; margin-bottom:4px;">✅ Reservation Confirmed — Benagil
+                    Express</div>
+                  <div><strong>Reservation No.</strong> 337514646</div>
+                  <div><strong>Date:</strong> Sunday, April 5, 2026 · 10:00 AM – 12:00 PM</div>
+                  <div><strong>Group:</strong> 1 Private Group · Amount Paid: €350.00</div>
+                  <div><strong>Check-in:</strong> Portimão Naval Club (Portisub Building), 15 min before boarding</div>
+                  <div><strong>Address:</strong> Av. Capitão João Fernandes Leão Pacheco, Portimão 8500-503</div>
+                  <div style="margin-top:4px;"><strong>Contact:</strong> Shreyak Shah · +1 415-926-1335 ·
+                    shahshreyak3@gmail.com</div>
+                </div>
+                <div class="card-actions" style="margin-top:8px;"><a
+                    href="https://maps.google.com/?q=Portimao+Naval+Club+Portisub+Building+Benagil+Express"
+                    class="btn-map btn-faro">📍 Maps to Check-in</a></div>
+              </div>
             </div>
-            <div class="log-row"><span class="log-icon">👟</span>
-              <div class="log-text"><strong>Ponta da Piedade steps</strong>~230 stone steps down to the water. Doable
-                for 9–11 yr olds but wear proper shoes. Boat tours available from the base if kids don't want to
-                descend.</div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Explore Lagos Downtown</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
+                </div>
+                <div class="card-meta"><span class="meta">⏱ 12:30 PM – 02:30 PM</span><span class="meta">📍 Lagos
+                    Centre</span></div>
+                <div class="card-desc">Arrive by taxi from Portimão. Explore the historic town center with its tiled
+                  buildings, boutiques, and street performers before heading to lunch.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Lagos+Old+Town+Portugal"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Ponta da Piedade & Praia do Camilo</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
+                </div>
+                <div class="card-meta"><span class="meta">⏱ 02:30 PM Onwards</span><span class="meta">🚗 5 min from
+                    centre</span></div>
+                <div class="card-desc">The crown jewel of Lagos cliffs. Walk the boardwalks for the views, then hit
+                  Praia do Camilo to see (and climb) the iconic wooden stairs.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Ponta+da+Piedade+Lagos"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Sagres & Cabo de São Vicente</div><span class="badge b-free">Optional</span>
+                </div>
+                <div class="card-meta"><span class="meta">📍 The "End of World"</span><span class="meta">🚗 30 min from
+                    Lagos</span></div>
+                <div class="card-desc">Optional: If sunset is clear, drive or taxi out to the lighthouse at Sagres. The
+                  windswept cliffs are dramatic and the history of exploration is palpable.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Cabo+de+Sao+Vicente+Sagres"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Lagos Old Town Walls</div><span class="badge b-free">Free</span>
+                </div>
+                <div class="card-meta"><span class="meta">⏱ 45 min</span><span class="meta">🚶 Lagos city</span></div>
+                <div class="card-desc">Well-preserved historic fortified walls. A nice stroll while you explore the
+                  downtown center.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Lagos+Old+Town+Walls"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Praia Dona Ana</div><span class="badge b-free">Free</span>
+                </div>
+                <div class="card-meta"><span class="meta">📍 Near Camilo</span></div>
+                <div class="card-desc">Another iconic Lagos beach with spectacular orange cliffs and calm swimming
+                  water. Good fallback if Camilo is too crowded.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Praia+Dona+Ana+Lagos"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="acc-section acc-food">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-header-left"><span class="acc-icon">🍽️</span><span class="acc-title">Food</span><span
+              class="acc-count">5</span></div>
+          <span class="acc-chevron">▾</span>
+        </button>
+        <div class="acc-body">
+          <div class="cards-wrap">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Goji Lounge Café</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
+                </div>
+                <div class="card-meta"><span class="meta">⏱ 01:00 PM Lunch</span><span class="meta">📍 Lagos
+                    Downtown</span></div>
+                <div class="card-desc">Located right in the center. Fantastic vegetarian-friendly menu featuring bowls,
+                  wraps, and healthy bites. Very cozy and family-friendly.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Goji+Lounge+Cafe+Lagos"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">A Vela</div><span class="badge"
+                    style="background:var(--ink); color:#fff; border:1px solid var(--gold); padding: 3px 8px; font-weight: 700;">📍
+                    FINAL SPOT</span>
+                </div>
+                <div class="card-meta"><span class="meta">🌙 Dinner</span><span class="meta">📍 Carvoeiro</span></div>
+                <div class="card-desc">Final dinner of the Algarve leg. They are very accommodating with vegetarian
+                  requests. A warm, traditional atmosphere.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Restaurante+A+Vela+Carvoeiro"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Estúdio Vegetariano 🎟️</div><span class="badge b-vegan">🌿 100% Veg</span>
+                </div>
+                <div class="card-meta"><span class="meta">📍 Lagos</span><span class="meta">⭐ 4.8/5</span></div>
+                <div class="card-desc">Best dedicated vegetarian food in the city. Small and popular—must book and must
+                  bring cash.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Estudio+Vegetariano+Lagos"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Nola Kitchen</div><span class="badge b-veg">🌱 Healthy</span>
+                </div>
+                <div class="card-meta"><span class="meta">📍 Lagos</span></div>
+                <div class="card-desc">Organic, healthy bowls and fresh juices. Another great lunch option right in the
+                  center.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Nola+Kitchen+Lagos"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Casa do Prego</div><span class="badge b-veg">🌱 Veg Options</span>
+                </div>
+                <div class="card-meta"><span class="meta">🌅 Rooftop</span><span class="meta">📍 Lagos</span></div>
+                <div class="card-desc">Popular rooftop spot with great energy and several solid vegetarian tapas/mains.
+                </div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Casa+do+Prego+Lagos"
+                    class="btn-map btn-faro">📍 Maps</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-section acc-logistics">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-header-left"><span class="acc-icon">🚗</span><span class="acc-title">Logistics</span></div>
+          <span class="acc-chevron">▾</span>
+        </button>
+        <div class="acc-body">
+          <div class="logistics-block">
+            <div class="log-row"><span class="log-icon">🚕</span>
+              <div class="log-text"><strong>Transit to Lagos</strong>After the boat tour ends at 12:00 PM, take a ~30
+                min taxi/Uber to Lagos town center. It's affordable and much easier than finding parking twice.</div>
+            </div>
+            <div class="log-row"><span class="log-icon">💵</span>
+              <div class="log-text"><strong>Bring Cash</strong>Many of the best Lagos cafes (including Estúdio and Goji
+                occasionally) prefer cash or are cash-only.</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="acc-section acc-kids">
         <button class="acc-header" onclick="toggleAcc(this)">
           <div class="acc-header-left"><span class="acc-icon">🎒</span><span class="acc-title">Kids Pick</span></div>
@@ -1337,7 +1424,7 @@
                   <div class="card-name"><span class="must">⭐</span>Chapel of Bones — Igreja do Carmo</div><span
                     class="badge b-must">⭐ Must-Do</span>
                 </div>
-                <div class="card-meta"><span class="meta">⏱ 30–45 min</span><span class="meta">🎟️ ~€4pp</span></div>
+                <div class="card-meta"><span class="meta">⏱ 30–45 min</span><span class="meta">🕐 Mon–Sat 10am–6pm · Sun 10am–1pm</span><span class="meta">🎟️ ~€4pp</span></div>
                 <div class="card-desc">A small chapel whose walls are lined with the bones and skulls of monks — eerie,
                   beautiful, uniquely Portuguese. Kids aged 9–11 will be fascinated (not actually scary). Don't skip
                   this.</div>
@@ -1350,7 +1437,7 @@
                 <div class="card-row1">
                   <div class="card-name">Faro Cathedral — Sé Cathedral</div><span class="badge b-free">Free entry</span>
                 </div>
-                <div class="card-meta"><span class="meta">⏱ 30 min</span><span class="meta">📍 Inside Old Town</span>
+                <div class="card-meta"><span class="meta">⏱ 30 min</span><span class="meta">🕐 Mon–Sat 10am–6:30pm · Bell tower ~€3pp</span><span class="meta">📍 Inside Old Town</span>
                 </div>
                 <div class="card-desc">Mix of Gothic, Renaissance and Baroque architecture. Climb the bell tower for
                   rooftop views over the lagoon and town. Best views in Faro.</div>
@@ -1494,27 +1581,35 @@
         <div class="city-head-text">
           <h2>Lisbon</h2>
           <p>Sofitel Liberdade, Av. da Liberdade 127 &nbsp;·&nbsp; Apr 6–9</p>
+          <p style="font-size:0.72rem; margin-top:4px; opacity:0.75;">SS (Accor): <strong>QFWDLGHQ</strong>
+            &nbsp;·&nbsp; SJC (Bilt): <strong>1319AD50516</strong></p>
         </div>
       </div>
     </div>
 
     <div class="day-selector">
-      <button class="day-pill active-lisbon" onclick="switchDay('lisbon','l1',this)">Apr 6 · Arrive</button>
+      <button class="day-pill active-lisbon" onclick="switchDay('lisbon','l1',this)">Apr 6 · Rossio + Alfama</button>
       <button class="day-pill" onclick="switchDay('lisbon','l2',this)">Apr 7 · Belém</button>
       <button class="day-pill" onclick="switchDay('lisbon','l3',this)">Apr 8 · Sintra</button>
-      <button class="day-pill" onclick="switchDay('lisbon','l4',this)">Apr 9 · Alfama → Porto</button>
+      <button class="day-pill" onclick="switchDay('lisbon','l4',this)">Apr 9 · Lisbon → Porto</button>
     </div>
 
     <!-- APR 6 LISBON -->
     <div id="lisbon-l1" class="day-panel active">
-      <div class="tip">💡 <strong>Arrive Lisbon evening</strong> from Faro (~17:30–18:30). Check in Sofitel, freshen up.
-        Easy first Lisbon evening — the hotel is on Avenida da Liberdade, one of Europe's grandest boulevards. A stroll
-        south leads you naturally into Chiado and Baixa.</div>
+      <div class="tip">💡 <strong>Arrive Lisbon ~11am from Faro.</strong> Check in to Sofitel, then dive straight into
+        the city — start at Rossio Square, work through Baixa, ride the Santa Justa Lift, explore Carmo Convent, then
+        hop Tram 28 up to Alfama and São Jorge Castle for sunset panoramas.</div>
+      <div
+        style="margin: 10px 0 14px; padding: 11px 14px; background: rgba(234,179,8,0.09); border: 1.5px solid rgba(234,179,8,0.5); border-radius: 10px; font-size: 0.82rem; line-height: 1.7;">
+        <span style="font-weight:700;">🚋 Use Funiculars &amp; Trams</span> — They save significant time on Lisbon's
+        steep hills. Elevador da Glória goes up to Miradouro de São Pedro de Alcântara. Tram 28 is the classic route up
+        to Alfama.
+      </div>
 
       <div class="acc-section acc-sights open">
         <button class="acc-header" onclick="toggleAcc(this)">
           <div class="acc-header-left"><span class="acc-icon">📍</span><span class="acc-title">Sights</span><span
-              class="acc-count">2</span></div>
+              class="acc-count">6</span></div>
           <span class="acc-chevron">▾</span>
         </button>
         <div class="acc-body">
@@ -1522,26 +1617,87 @@
             <div class="card sight-card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name">Avenida da Liberdade Evening Stroll</div><span class="badge b-free">Free</span>
+                  <div class="card-name">Rossio Square &amp; Baixa Neighborhood</div><span
+                    class="badge b-free">Free</span>
                 </div>
-                <div class="card-meta"><span class="meta">🕐 Evening</span><span class="meta">🚶 Outside your
-                    door</span></div>
-                <div class="card-desc">One of Europe's most beautiful boulevards — wide tree-lined avenue with mosaic
-                  pavements, luxury boutiques and fountains. Easy first orientation walk. Leads south to Praça dos
-                  Restauradores and Rossio Square.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Avenida+da+Liberdade+Lisbon"
+                <div class="card-meta"><span class="meta">🕐 Morning</span><span class="meta">🚶 15 min from
+                    Sofitel</span></div>
+                <div class="card-desc">Lisbon's living room — famous wavy black-and-white mosaic pavement, cafes all
+                  around, the old Rossio train station. Explore the surrounding Baixa grid of elegant 18th-century
+                  streets.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Rossio+Square+Lisbon"
                     class="btn-map btn-lisbon">📍 Maps</a></div>
               </div>
             </div>
             <div class="card sight-card">
               <div class="card-inner">
                 <div class="card-row1">
-                  <div class="card-name">Rossio Square (Praça Dom Pedro IV)</div><span class="badge b-free">Free</span>
+                  <div class="card-name"><span class="must">⭐</span>Santa Justa Lift</div><span class="badge b-must">⭐
+                    Iconic</span>
                 </div>
-                <div class="card-meta"><span class="meta">🕐 15 min from Sofitel</span></div>
-                <div class="card-desc">Lisbon's living room — famous wavy black-and-white mosaic pavement, cafes all
-                  around, the old Rossio train station (departs for Sintra tomorrow!). A natural gathering point.</div>
-                <div class="card-actions"><a href="https://maps.google.com/?q=Rossio+Square+Lisbon+Praca+Dom+Pedro"
+                <div class="card-meta"><span class="meta">⏱ 20 min</span><span class="meta">🕐 Daily 7am–11pm</span><span class="meta">📍 Baixa · ~€5.30pp</span>
+                </div>
+                <div class="card-desc">A Gothic iron elevator built in 1902 that connects the lower Baixa with the upper
+                  Carmo neighborhood. Ride to the top terrace for sweeping views over the city's rooftops.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Santa+Justa+Lift+Lisbon"
+                    class="btn-map btn-lisbon">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name"><span class="must">⭐</span>Carmo Convent (Convento do Carmo)</div><span
+                    class="badge b-must">⭐ Must-Do</span>
+                </div>
+                <div class="card-meta"><span class="meta">⏱ 45 min</span><span class="meta">🕐 Mon–Sat 10am–7pm (Sun closed)</span><span class="meta">📍 Top of Santa Justa · ~€5pp</span></div>
+                <div class="card-desc">One of Lisbon's most haunting landmarks — destroyed in the 1755 earthquake and
+                  deliberately left in ruins. The Gothic arches open up to the sky, making it one of the most photogenic
+                  spots in the city.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Carmo+Convent+Lisbon+Convento+do+Carmo"
+                    class="btn-map btn-lisbon">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name"><span class="must">⭐</span>Tram 28 → Alfama District</div><span
+                    class="badge b-must">⭐ Iconic</span>
+                </div>
+                <div class="card-meta"><span class="meta">🚋 Afternoon</span><span class="meta">📍 Baixa → Alfama</span>
+                </div>
+                <div class="card-desc">Jump on Tram 28 🚋 heading east — it climbs through the historic Alfama district.
+                  Unlike other Lisbon neighborhoods, Alfama survived the 1755 earthquake and remains a maze of narrow
+                  medieval streets. Get "lost" deliberately — it gives the best insight into local life.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Tram+28+Lisbon+Alfama"
+                    class="btn-map btn-lisbon">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name"><span class="must">⭐</span>São Jorge Castle</div><span class="badge b-must">⭐
+                    Best Views</span>
+                </div>
+                <div class="card-meta"><span class="meta">⏱ 1 hr</span><span class="meta">🕐 Daily 9am–9pm (Apr–Oct)</span><span class="meta">📍 Alfama hilltop · ~€15pp</span></div>
+                <div class="card-desc">11th-century Moorish castle taken by King Afonso Henriques in 1147. Damaged in
+                  the 1755 earthquake, but the <strong>views are extraordinary</strong> — you can see most of Lisbon
+                  from up here. Visit in the afternoon to catch the golden-hour light on the city.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Sao+Jorge+Castle+Lisbon+Castelo"
+                    class="btn-map btn-lisbon">📍 Maps</a></div>
+              </div>
+            </div>
+            <div class="card sight-card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name">Miradouro de São Pedro de Alcântara</div><span class="badge b-free">Free ·
+                    Sunset</span>
+                </div>
+                <div class="card-meta"><span class="meta">🌅 Sunset drinks</span><span class="meta">🚡 Elevador da
+                    Glória</span></div>
+                <div class="card-desc">Take the Elevador da Glória funicular up from Restauradores for sunset drinks at
+                  this terrace viewpoint. Sweeping views over the castle and the Tagus. Optional: follow with a
+                  traditional Fado dinner in Alfama 🎶🍷.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Miradouro+Sao+Pedro+Alcantara+Lisbon"
                     class="btn-map btn-lisbon">📍 Maps</a></div>
               </div>
             </div>
@@ -1637,9 +1793,15 @@
 
     <!-- APR 7 BELEM -->
     <div id="lisbon-l2" class="day-panel">
-      <div class="tip">💡 <strong>Belém day.</strong> Metro or taxi to Belém (~20 min). Jerónimos opens at 9:30am —
-        arrive at 9am to beat the queue. Walk to Belém Tower after. Pastéis de Belém on the way back. Evening: dinner in
-        Chiado or Ao 26.</div>
+      <div class="tip">💡 <strong>Belém day.</strong> Bus 714/728 or Tram 15E from Cais do Sodré (~35 min). Jerónimos
+        opens at 9:30am — arrive by 9:00–9:10am even with tickets, as security screening can delay entry. Tower after.
+        End with Time Out Market.</div>
+      <div
+        style="margin: 10px 0 14px; padding: 11px 14px; background: rgba(234,179,8,0.09); border: 1.5px solid rgba(234,179,8,0.5); border-radius: 10px; font-size: 0.82rem; line-height: 1.7;">
+        <span style="font-weight:700;">🍮 Don't skip the custard tart</span> — Pastéis de Belém is right next to
+        Jerónimos. Queue looks long but moves fast. The cloister is the highlight of the monastery; church entry is free
+        but a separate line.
+      </div>
 
       <div class="acc-section acc-sights open">
         <button class="acc-header" onclick="toggleAcc(this)">
@@ -1795,6 +1957,16 @@
                     class="btn-map btn-lisbon">📍 Maps</a></div>
               </div>
             </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-row1">
+                  <div class="card-name"><span class="must">⭐</span>Time Out Market</div><span class="badge b-veg">🌱 Veg Stalls</span>
+                </div>
+                <div class="card-meta"><span class="meta">📍 Mercado da Ribeira · Cais do Sodré</span><span class="meta">🕐 Open till midnight</span></div>
+                <div class="card-desc">A massive food hall with endless options — great vegetarian stalls throughout. Look for <strong>Terra do Paço</strong> stall for excellent veggie options. Perfect evening meal after Belém, right on the route back.</div>
+                <div class="card-actions"><a href="https://maps.google.com/?q=Time+Out+Market+Lisbon+Mercado+da+Ribeira" class="btn-map btn-lisbon">📍 Maps</a></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1845,9 +2017,37 @@
 
     <!-- APR 8 SINTRA -->
     <div id="lisbon-l3" class="day-panel">
-      <div class="tip">💡 <strong>Leave early — Sintra gets very crowded by noon.</strong> Walk to Rossio Station (15
-        min from Sofitel) by 8:30am. Train to Sintra: 40 min, runs every 20 min. Buy a day tram/bus pass in Sintra
-        village (€15pp) to hop between palaces.</div>
+      <div class="tip">💡 <strong>Sintra Day Trip (booked ✅).</strong> Leave early — Sintra gets very crowded by noon.
+        Rossio Station (15 min from Sofitel) by 8:30am. Train to Sintra ~40 min. Explore mystical gardens and the
+        Initiation Well at Quinta da Regaleira. Evening: rooftop cocktails at Park Bar 🍸.</div>
+
+      <!-- Sintra Booking Confirmation -->
+      <div
+        style="margin: 10px 0 14px; padding: 14px 16px; background: rgba(22,163,74,0.07); border: 1.5px solid rgba(22,163,74,0.4); border-radius: 12px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+          <span style="font-size:1.3rem;">🚠</span>
+          <div>
+            <div style="font-weight:700; font-size:0.95rem;">Sintra Day Tour — Booked via Hard Rock Café | Lisboa</div>
+            <span
+              style="background:#16a34a; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700;">✅
+              CONFIRMED — Added to Apple Wallet</span>
+          </div>
+        </div>
+        <div style="font-size:0.8rem; line-height:1.9; color: var(--ink);">
+          <div><strong>Date:</strong> Wed, Apr 8, 2026 &nbsp;·&nbsp; <strong>Meeting Point:</strong> Hard Rock Café
+            Lisboa, Av. da Liberdade 2</div>
+          <div style="margin-top:6px; padding:8px 10px; background:rgba(0,0,0,0.04); border-radius:6px;">
+            <div style="font-weight:600; margin-bottom:2px;">Booking 1 — 6 Adults + 3 Youths</div>
+            <div><strong>Price:</strong> USD $879.66 &nbsp;·&nbsp; <strong>Conf No:</strong> 1731688949 &nbsp;·&nbsp;
+              <strong>Ref:</strong> 1348527683</div>
+          </div>
+          <div style="margin-top:6px; padding:8px 10px; background:rgba(0,0,0,0.04); border-radius:6px;">
+            <div style="font-weight:600; margin-bottom:2px;">Booking 2 — 2 Adults</div>
+            <div><strong>Price:</strong> USD $203.46 &nbsp;·&nbsp; <strong>Conf No:</strong> 1731693159 &nbsp;·&nbsp;
+              <strong>Ref:</strong> 1348531911</div>
+          </div>
+        </div>
+      </div>
 
       <div class="route">
         <div class="route-steps">
@@ -2067,9 +2267,13 @@
 
     <!-- APR 9 ALFAMA -->
     <div id="lisbon-l4" class="day-panel">
-      <div class="tip">💡 <strong>Last Lisbon morning + evening train to Porto.</strong> Morning: Alfama, Tram 28, São
-        Jorge Castle. Afternoon: check out Sofitel (~12pm), Tile Museum option or explore Bairro Alto. Taxi to Lisboa
-        Oriente for Porto Alfa Pendular.</div>
+      <div class="tip">💡 <strong>½ Day in Lisbon — depart to Porto at 2pm.</strong> Relaxed morning in Lisbon, check out Sofitel. Take the Alfa Pendular from Lisboa Oriente (~2pm) to Porto (~4pm).</div>
+      <div style="margin: 10px 0 6px; padding: 11px 14px; background: rgba(234,179,8,0.09); border: 1.5px solid rgba(234,179,8,0.5); border-radius: 10px; font-size: 0.82rem; line-height: 1.7;">
+        <span style="font-weight:700;">☕ Relaxed Morning Option</span> — <strong>The Folks Chiado</strong> (1 km from Sofitel) for a slow breakfast before checkout. Great spot if you're not rushing.
+      </div>
+      <div style="margin: 0 0 14px; padding: 11px 14px; background: rgba(234,179,8,0.09); border: 1.5px solid rgba(234,179,8,0.5); border-radius: 10px; font-size: 0.82rem; line-height: 1.7;">
+        <span style="font-weight:700;">🍸 Previous Evening (Apr 8) — After Sintra</span> — End with rooftop cocktails and city views at <strong>Park Bar</strong> 🌆. If you have energy left, take a final stroll through <strong>Pink Street</strong> (Rua Nova do Carvalho) 🌸.
+      </div>
 
       <div class="acc-section acc-sights open">
         <button class="acc-header" onclick="toggleAcc(this)">
